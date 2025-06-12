@@ -2,6 +2,7 @@
 
 let currentInput = '';
 let isOn = true;
+let memory = 0;
 
 function setCalculatorOn(state) {
     isOn = state;
@@ -73,6 +74,26 @@ function calculate() {
 
 function updateDisplay() {
     document.getElementById('display').value = currentInput;
+}
+
+function memoryAdd() {
+    const display = document.getElementById('display');
+    const value = parseFloat(display.value);
+    if (!isNaN(value)) memory += value;
+}
+
+function memorySubtract() {
+    const display = document.getElementById('display');
+    const value = parseFloat(display.value);
+    if (!isNaN(value)) memory -= value;
+}
+
+function memoryRecall() {
+    document.getElementById('display').value = memory;
+}
+
+function memoryClear() {
+    memory = 0;
 }
 
 // Optional: Keyboard support

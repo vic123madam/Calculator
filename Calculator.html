@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="Calculator">
-    <h1 style="text-align:center; margin-bottom:18px; color:#00ff15; font-family:'Segoe UI',Arial,sans-serif; letter-spacing:2px;"> Quava Calculator</h1>
+    <h1 style="text-align:center; margin-bottom:18px; color:white; font-family:'Segoe UI',Arial,sans-serif; letter-spacing:2px;"> Quava Calculator</h1>
     <input type="text" id="display" disabled style="display:block; margin: 0 auto 20px auto; text-align: right; width: 90%; max-width: 450px; font-size: 2em; padding: 14px; border-radius: 10px; border: 2px solid white; background: white; color: black; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />
     <div class="button-grid">
         <button type="button" onclick="setCalculatorOn(true)">On</button>
@@ -31,6 +31,10 @@
         <button type="button" onclick="append('.')">.</button>
         <button type="button" onclick="append('/')">/</button>
         <button type="button" onclick="calculate()">=</button>
+        <button type="button" onclick="memoryAdd()">M+</button>
+        <button type="button" onclick="memorySubtract()">M-</button>
+        <button type="button" onclick="memoryRecall()">MR</button>
+        <button type="button" onclick="memoryClear()">MC</button>
     </div>
 
   </div>  
