@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><form></form></title>
+    <link rel="stylesheet" href="Login.css">
+   
+</head>
+<body >
+  <div class="parent">
+    <div class="left-section">
+      <h1>QUAVA</h1>
+      <h2>Wear.Art,Feel Unique</h2>
+      <img src="images/Quava Logo.png" alt="" width="200px">
+    </div>
+    <div class="right-section">
+      <h1>Log In</h1>
+      <hr color="black">
+      <p>Welcome back! Please enter your credentials to log in.</p>
+      <div class="daughter">
+        <form id="LoginForm">
+          <label for="loginUsername">Username:</label><br>
+          <input id="loginUsername" type="text" name="username" required><br><br>
+          <label for="loginEmail">Email:</label><br>
+          <input id="loginEmail" type="email" name="email" required><br><br>
+          <label for="loginPassword">Password:</label><br>
+          <input id="loginPassword" type="password" name="password" required><br><br>
+          <button> Authenticate</button>
+          <h5>Dont have an account? <a href="RegForm.html">Sign Up</a></h5>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="Login.js"></script>
+</body>     
+</html>

@@ -1,0 +1,93 @@
+body {
+    /* Center the parent div vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image:('"images/pexels-songbirdent-tv-562255885-17451260.jpg"');
+}
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 32px;
+    background: rgba(252, 248, 20, 0.55); /* more transparent yellow */
+    font-size: larger;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 32px 24px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+}
+
+.left-section img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.left-section h1 {
+    font-family: 'Brush Script MT', 'Pacifico', cursive, ;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    color: #222;
+    text-shadow: 1px 2px 8px #fffbe6, 0 2px 8px rgba(0,0,0,0.10);
+    margin-bottom: 8px;
+}
+
+.right-section {
+    flex: 1;
+    min-width: 280px;
+    /* background: rgba(255, 255, 255, 0.65);  semi-transparent white */
+    background: transparent;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 24px 18px;
+}
+
+@media (max-width: 800px) {
+    .parent {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 8px;
+    }
+    .left-section img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.parent :hover{font-size: larger; }
+.child button{width: 100%; background-color:black; color: white;padding: 10px;border:10%;
+    border-radius: 10px; font-size: 16px; cursor: pointer;width: auto;
+ }
+.son img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    aspect-ratio: 1/1;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.daughter {
+    background: transparent;
+    box-shadow: none;
+}
+
+
+
