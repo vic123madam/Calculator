@@ -22,9 +22,22 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Please enter a valid email address.');
             return;
         }
-        // Success (replace with real authentication in production)
-        alert('Login successful!');
-        form.reset();
-         window.location.href = 'Calculator.html'
+        // Check registration status and credentials
+        const regData = JSON.parse(localStorage.getItem('regData') || '{}');
+        if (
+            localStorage.getItem('isRegistered') === 'true' &&
+            regData.username === username &&
+            regData.email === email &&
+            regData.password === password
+        ) {
+            alert('Login successful!');
+            form.reset();
+            window.location.href = 'Calculator.html';
+        } else {
+            alert('Credentials do not match our records. Please sign up again.');
+            localStorage.removeItem('isRegistered');
+            localStorage.removeItem('regData');
+            window.location.href = 'RegForm.html';
+        }
     });
 });

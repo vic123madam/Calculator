@@ -42,9 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         // Success
-        alert('Registration successful!');
-        form.reset();
-         window.location.href = 'Loginforms.html'
+        localStorage.setItem('isRegistered', 'true');
+        localStorage.setItem('regData', JSON.stringify({
+            username,
+            email,
+            password
+        }));
+        // Redirect to login page
+        window.location.href = 'index.html';
     });
    
 });
