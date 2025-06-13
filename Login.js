@@ -1,6 +1,12 @@
 // Login.js - Login Form Validation
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Check if user is registered
+    if (localStorage.getItem('isRegistered') !== 'true') {
+        // Not registered, redirect to registration page
+        window.location.href = 'RegForm.html';
+    }
+
     const form = document.getElementById('LoginForm');
     if (!form) return;
 

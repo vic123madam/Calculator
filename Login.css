@@ -16,6 +16,11 @@ body {
     margin-top: 8px;
     margin-bottom: 24px;
  }
+.daughter button:hover {
+    background-color: rgb(55, 16, 107); /* bright yellow/orange for hover */
+    color: white; /* white text for contrast */
+    transition: background 0.2s, color 0.2s;
+}
 .daughter input[type="password"] {
     margin-bottom: 4px;
 }

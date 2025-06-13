@@ -78,14 +78,12 @@ function updateDisplay() {
 
 function memoryAdd() {
     const display = document.getElementById('display');
-    const value = parseFloat(display.value);
-    if (!isNaN(value)) memory += value;
+    memory += Number(display.value) || 0;
 }
 
 function memorySubtract() {
     const display = document.getElementById('display');
-    const value = parseFloat(display.value);
-    if (!isNaN(value)) memory -= value;
+    memory -= Number(display.value) || 0;
 }
 
 function memoryRecall() {
@@ -94,6 +92,10 @@ function memoryRecall() {
 
 function memoryClear() {
     memory = 0;
+}
+
+function logout() {
+    window.location.href = 'index.html'; // Redirect to login page
 }
 
 // Optional: Keyboard support
